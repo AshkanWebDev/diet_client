@@ -20,10 +20,7 @@ export default defineNuxtConfig({
       ],
       script: [
         // <script src="https://myawesome-lib.js"></script>
-        {
-          src: "https://cdn.jsdelivr.net/gh/moalgholi/diet_client@main/public/persian-date.min.js",
-          body: true,
-        },
+        { src: "/persian-date.min.js", body: true },
         // { src: "@/assets/js/persian-date.min.js", body: true },
       ],
       link: [
