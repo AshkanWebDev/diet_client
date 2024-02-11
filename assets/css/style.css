@@ -1,4 +1,11 @@
 :root {
+  /* --primary-color: rgb(2, 84, 100); */
+  --primary-color: rgb(56, 41, 16);
+  --secondary-color: rgb(229, 124, 35);
+  --tertiary-color: rgb(232, 170, 66);
+  --text-color: rgb(56, 41, 16);
+  --white-color: rgb(248, 241, 241);
+  --border-color: rgb(154, 187, 193);
   --main-text-color: rgb(13, 36, 76);
   --main-text-color-08: rgba(13, 36, 76, 0.08);
   --main-text-color-1: rgba(13, 36, 76, 0.1);
@@ -10,7 +17,7 @@
   --main-text-color-7: rgba(13, 36, 76, 0.7);
   --main-text-color-8: rgba(13, 36, 76, 0.8);
   --main-text-color-9: rgba(13, 36, 76, 0.9);
-  --second-color: rgb(223, 195, 139);
+  --light-blue-color: rgb(54, 155, 234);
   --font: "IranYekan FarsiNumerals", "Vazir FarsiNumerals",
     "Shabnam FarsiNumerals", "IranYekan WebFonts", "Vazir WebFonts",
     "Shabnam WebFonts";
@@ -18,23 +25,24 @@
   --h2: 1.5rem;
   --h3: 1.17rem;
   --h4: 1rem;
+  --h4-5: 0.915rem;
   --h5: 0.83rem;
   --h6: 0.67rem;
   --p: 1rem;
+  --shadow-1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 body {
   font-family: var(--font);
-  cursor: context-menu;
-  user-select: none;
   font-size: 100%;
-  color: var(--main-text-color);
+  color: var(--primary-color);
 }
 input,
 button {
   font-family: inherit;
 }
 input:focus {
-  outline: solid 2px var(--main-text-color-9);
+  border: solid 2px var(--border-color);
+  border-radius: 3px;
 }
 a {
   color: currentColor;
@@ -46,18 +54,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
-}
-@media (min-width: 990px) {
-  .widthbyside {
-    width: calc(calc(100% / 4) - 1rem) !important;
-  }
-}
-@media (min-width: 1400px) {
-  .widthbyside {
-    width: calc(calc(100% / 5) - 1rem) !important;
-  }
 }
