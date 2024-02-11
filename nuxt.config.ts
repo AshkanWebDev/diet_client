@@ -20,7 +20,8 @@ export default defineNuxtConfig({
       ],
       script: [
         // <script src="https://myawesome-lib.js"></script>
-        // { src: "https://awesome-lib.js" },
+        { src: "/persian-date.min.js", body: true },
+        // { src: "@/assets/js/persian-date.min.js", body: true },
       ],
       link: [
         // <link rel="stylesheet" href="https://myawesome-lib.css">
