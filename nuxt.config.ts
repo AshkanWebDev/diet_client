@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       ],
       link: [
         // <link rel="stylesheet" href="https://myawesome-lib.css">
-        // { rel: "icon", type: "image/webp", href: "/favicon.webp" },
+        { rel: "icon", type: "image/png", href: "/favicon.png" },
         {
           rel: "stylesheet",
           type: "text/css",
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
           type: "text/css",
           href: "https://cdn.jsdelivr.net/gh/moalgholi/fonts@main/dist/Shabnam/Shabnam.min.css",
         },
-        // { rel: "manifest", href: "/manifest.json" },
+        { rel: "manifest", href: "/manifest.json" },
       ],
       // please note that this is an area that is likely to change
       style: [
