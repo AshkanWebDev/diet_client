@@ -6,7 +6,7 @@
       تناسب اندام برای شما سیستم جذب کالری متوسط روزانه 2500 کیلوکالری را میدهد
       تا در مدت 30 روز به آرامی به تناسب اندام خود برسید.
     </p>
-    <AbsorptionDate />
+    <CellFaIRDate />
     <ul class="responsive-table">
       <li class="table-header">
         <div class="col col-1">وعده</div>
