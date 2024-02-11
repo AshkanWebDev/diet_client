@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         },
         { hid: "description", name: "description", content: "" },
         { name: "format-detection", content: "telephone=no" },
-        { name: "theme-color", content: "#0d244c" },
+        { name: "theme-color", content: "#833920" },
       ],
       script: [
         // <script src="https://myawesome-lib.js"></script>
