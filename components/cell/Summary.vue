@@ -25,13 +25,13 @@ export default {
       </li>
       <li class="table-row">
         <div class="col col-1" data-label="مفسر">BMI</div>
-        <div class="col col-2" data-label="وزن شما">{{ weight }} KG</div>
+        <div class="col col-2" data-label="وزن شما">{{ weight }} kg</div>
         <div class="col col-3" data-label="ایده آل">
-          {{ perfect_weight }} KG
+          {{ perfect_weight }} kg
         </div>
         <div class="col col-4" data-label="فاصله">
           {{ weight - perfect_weight }}
-          KG
+          kg
         </div>
       </li>
     </ul>
