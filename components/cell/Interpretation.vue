@@ -15,10 +15,19 @@ export default {
 <template>
   <ul class="interpretation">
     <li>تفسیر جدول بالا</li>
-    <li>شما دچار 5 کیلوگرم کمبود وزن هستید.</li>
-
-    <li>شما از ناحیه دور کمر هستید.</li>
-    <li>شما از ناحیه ران هستید.</li>
+    <li v-if="perfect_weight > weight">
+      شما دچار {{ perfect_weight - weight }} کیلوگرم کمبود وزن هستید.
+    </li>
+    <li v-if="perfect_weight == weight">وزن شما دقیقا فیت میباشد.</li>
+    <li v-if="perfect_weight < weight">
+      شما دچار {{ weight - perfect_weight }} کیلوگرم اضافه وزن هستید.
+    </li>
+    <li v-if="perfect_waist > waist">شما از ناحیه دور کمر کمبود وزن دارید.</li>
+    <li v-if="perfect_waist == waist">دور کمر شما دقیقا فیت هست.</li>
+    <li v-if="perfect_waist < waist">شما از ناحیه دور کمر اضافه وزن دارید.</li>
+    <li v-if="perfect_thigh > thigh">شما از ناحیه دور ران کمبود وزن دارید.</li>
+    <li v-if="perfect_thigh == thigh">دور ران شما دقیقا فیت هست.</li>
+    <li v-if="perfect_thigh < thigh">شما از ناحیه دور ران اضافه وزن دارید.</li>
   </ul>
 </template>
 
