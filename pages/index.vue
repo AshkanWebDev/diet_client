@@ -1,11 +1,12 @@
 <script setup>
-let height = 175;
-let weight = 55;
-let waist = 71;
-let thigh = 51;
-let perfect_weight = 69;
-let perfect_waist = 75;
-let perfect_thigh = 59;
+const data = await $fetch("/UserData.json");
+// let height = 175;
+// let weight = 55;
+// let waist = 71;
+// let thigh = 51;
+// let perfect_weight = 69;
+// let perfect_waist = 75;
+// let perfect_thigh = 59;
 
 useSeoMeta({
   ogTitle: "دستیار هوشمند تغذیه",
@@ -25,28 +26,28 @@ useSeoMeta({
     <div class="index-header">
       <CellCommentator
         commentator="BMI"
-        :result="weight / ((height / 100) * (height / 100))"
+        :result="data.weight / ((data.height / 100) * (data.height / 100))"
       />
-      <CellCommentator commentator="WHtR" :result="waist / height" />
-      <CellCommentator commentator="WHR" :result="waist / thigh" />
+      <CellCommentator commentator="WHtR" :result="data.waist / data.height" />
+      <CellCommentator commentator="WHR" :result="data.waist / data.thigh" />
     </div>
     <CellSummary
-      :height="height"
-      :weight="weight"
-      :waist="waist"
-      :thigh="thigh"
-      :perfect_weight="perfect_weight"
-      :perfect_thigh="perfect_thigh"
-      :perfect_waist="perfect_waist"
+      :height="data.height"
+      :weight="data.weight"
+      :waist="data.waist"
+      :thigh="data.thigh"
+      :perfect_weight="data.perfect_weight"
+      :perfect_thigh="data.perfect_thigh"
+      :perfect_waist="data.perfect_waist"
     />
     <CellInterpretation
-      :height="height"
-      :weight="weight"
-      :waist="waist"
-      :thigh="thigh"
-      :perfect_weight="perfect_weight"
-      :perfect_thigh="perfect_thigh"
-      :perfect_waist="perfect_waist"
+      :height="data.height"
+      :weight="data.weight"
+      :waist="data.waist"
+      :thigh="data.thigh"
+      :perfect_weight="data.perfect_weight"
+      :perfect_thigh="data.perfect_thigh"
+      :perfect_waist="data.perfect_waist"
     />
   </div>
 </template>
