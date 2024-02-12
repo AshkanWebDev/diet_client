@@ -1,6 +1,29 @@
+<script setup>
+const data = await $fetch("/UserData.json");
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      showDiet: false,
+      showDietAttribute: false,
+      showBirthday: false,
+      showGender: false,
+      showHeight: false,
+      showWeight: false,
+      showThigh: false,
+      showWaist: false,
+      showHip: false,
+      showLogout: false,
+    };
+  },
+};
+</script>
+
 <template>
   <div class="profile">
-    <div class="image male">
+    <div class="image" :class="data.sex">
       <span></span>
     </div>
     <ul>
@@ -8,7 +31,7 @@
         <p>محمدعلی قلی&zwnj;زاده</p>
       </li>
       <li>
-        <div>ایمیل : moal.gholi@gmail.com</div>
+        <div>ایمیل : {{ data.email }}</div>
       </li>
       <li>
         <div>نوع رژیم : همه چیز خوار</div>
@@ -23,27 +46,28 @@
         <button @click="showBirthday = true">ویرایش</button>
       </li>
       <li>
-        <div>جنسیت : مذکر</div>
+        <div v-if="data.sex == 'male'">جنسیت : آقا</div>
+        <div v-if="data.sex == 'female'">جنسیت : خانم</div>
         <button @click="showGender = true">ویرایش</button>
       </li>
       <li>
-        <div>قد : 175 سانتی&zwnj;متر</div>
+        <div>قد : {{ data.height }} سانتی&zwnj;متر</div>
         <button @click="showHeight = true">ویرایش</button>
       </li>
       <li>
-        <div>وزن : 55 کیلوگرم</div>
+        <div>وزن : {{ data.weight }} کیلوگرم</div>
         <button @click="showWeight = true">ویرایش</button>
       </li>
       <li>
-        <div>دور ران : 51 سانتی&zwnj;متر</div>
+        <div>دور ران : {{ data.thigh }} سانتی&zwnj;متر</div>
         <button @click="showThigh = true">ویرایش</button>
       </li>
       <li>
-        <div>دور کمر : 71 سانتی&zwnj;متر</div>
+        <div>دور کمر : {{ data.waist }} سانتی&zwnj;متر</div>
         <button @click="showWaist = true">ویرایش</button>
       </li>
       <li>
-        <div>دور باسن : 80 سانتی&zwnj;متر</div>
+        <div>دور باسن : {{ data.hip }} سانتی&zwnj;متر</div>
         <button @click="showHip = true">ویرایش</button>
       </li>
       <li>
@@ -147,22 +171,3 @@
   cursor: pointer;
 }
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      showDiet: false,
-      showDietAttribute: false,
-      showBirthday: false,
-      showGender: false,
-      showHeight: false,
-      showWeight: false,
-      showThigh: false,
-      showWaist: false,
-      showHip: false,
-      showLogout: false,
-    };
-  },
-};
-</script>
