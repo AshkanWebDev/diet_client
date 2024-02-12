@@ -1,3 +1,12 @@
+<script>
+export default {
+  props: {
+    commentator: String,
+    result: Number,
+  },
+};
+</script>
+
 <template>
   <div class="commentator">
     <p>{{ commentator }}</p>
@@ -17,9 +26,3 @@
   box-shadow: var(--shadow-1);
 }
 </style>
-
-<script>
-export default {
-  props: ["commentator", "result"],
-};
-</script>
