@@ -28,7 +28,7 @@ export default {
     </div>
     <ul>
       <li>
-        <p>محمدعلی قلی&zwnj;زاده</p>
+        <p>{{ data.name }} {{ data.lastName }}</p>
       </li>
       <li>
         <div>ایمیل : {{ data.email }}</div>
